@@ -108,6 +108,18 @@ app.post('/users', (req, res) => {
   })
 });
 
+//post/users
+app.post('/users', (req,res)=>{
+  var body=_.pick(req.body,['email','password']);  //_.pic pick is available on loadash to pick the email and pass properties
+  var user=new User(body);
+
+  user.save().then((user)=>{
+    res.send(user);
+  }).catch((e)=>{
+    res.status(400).send(e);
+  })
+});
+
 app.listen(port, () => {
   console.log(`Started up at port ${port}`);
 });
