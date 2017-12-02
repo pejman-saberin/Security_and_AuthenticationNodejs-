@@ -1,0 +1,5 @@
+npm install validator@^5.6.0"  -->mongoose model validation
+
+npm install crypto-js@3.1.6 --save   -->for hasing
+
+npm i jsonwebtoken@7.1.9 --save
